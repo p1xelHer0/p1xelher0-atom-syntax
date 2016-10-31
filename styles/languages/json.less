@@ -1,0 +1,25 @@
+.source.json {
+  .meta.structure.dictionary.json {
+    & > .string.quoted.json {
+      & > .punctuation.string {
+        color: @syntax-text-color;
+      }
+      color: @syntax-text-color;
+    }
+
+    & > .separator.key-value {
+      color: @syntax-color-constant;
+    }
+  }
+
+  .meta.structure.dictionary.json, .meta.structure.array.json {
+    & > .value.json > .string.quoted.json,
+    & > .value.json > .string.quoted.json > .punctuation {
+      color: @green;
+    }
+
+    & > .constant.language.json {
+      color: @syntax-color-constant;
+    }
+  }
+}

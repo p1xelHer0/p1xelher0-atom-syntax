@@ -1,0 +1,110 @@
+// Editor styles (background, gutter, guides)
+
+@border-radius: 0rem;
+
+atom-text-editor::shadow,
+:host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      padding: 0 0.25em 0 0.5em;
+      -webkit-font-smoothing: antialiased;
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    background-color: @brown;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .fold-marker::before {
+    background: none;
+    content: " ...";
+    color: @cyan;
+  }
+
+  .fold-marker::after {
+    font-family: 'Octicons Regular';
+    content: "\f039";
+    background: none;
+    color: @syntax-text-color;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .bracket-matcher .region {
+    border-color: @syntax-result-marker-color;
+  }
+
+  //highlighting settigns (including hightlight-selected package)
+  //I prefer squares
+  .highlights {
+    .current-result .region, .find-result .region {
+      //background-color: fade(@white, 20%);
+      border-radius: @border-radius;
+    }
+
+    .current-result .region {
+      border-color: @white;
+    }
+
+    .find-result .region {
+      border-color: darken(@syntax-color-function, 30%);
+    }
+
+    .highlight-selected .region {
+      border: none;
+      border-radius: @border-radius;
+    }
+    // Background
+    .highlight-selected.background .region {
+      background-color: fade(@yellow, 40%);
+    }
+  }
+}
+
+#linter-inline {
+  border-radius: @border-radius;
+}
+
+//Pigments package
+atom-text-editor::shadow pigments-markers::shadow pigments-color-marker .region.background, atom-text-editor pigments-markers::shadow pigments-color-marker .region.background, atom-text-editor::shadow pigments-markers::shadow pigments-color-marker .region.background, atom-text-editor pigments-markers::shadow pigments-color-marker .region.background, atom-text-editor::shadow pigments-color-marker .region.background, atom-text-editor pigments-color-marker .region.background {
+  border-radius: @border-radius;
+}

@@ -1,0 +1,47 @@
+@import "colors";
+
+// Official Syntax Variables
+
+// General colors
+@syntax-text-color:            @very-light-brown;
+@syntax-cursor-color:          @purple;
+@syntax-selection-color:       @brown;
+@syntax-selection-flash-color: @very-light-brown;
+@syntax-background-color:      @very-dark-brown;
+
+// Guide colors
+@syntax-wrap-guide-color:          @dark-brown;
+@syntax-indent-guide-color:        @brown;
+@syntax-invisible-character-color: @brown;
+
+// For find and replace markers
+@syntax-result-marker-color:          @light-brown;
+@syntax-result-marker-color-selected: @white;
+
+// Gutter colors
+@syntax-gutter-text-color:                @syntax-selection-color;
+@syntax-gutter-text-color-selected:       @syntax-text-color;
+@syntax-gutter-background-color:          @syntax-background-color;
+@syntax-gutter-background-color-selected: @syntax-selection-color;
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed:  @blue;
+@syntax-color-added:    @green;
+@syntax-color-modified: @orange;
+@syntax-color-removed:  @red;
+
+// For language entity colors
+@syntax-color-variable:    @syntax-text-color;
+@syntax-color-constant:    @orange;
+@syntax-color-property:    @syntax-text-color;
+@syntax-color-function:    @cyan;
+@syntax-color-method:      @syntax-color-function;
+@syntax-color-operator:    @red;
+@syntax-color-class:       @red;
+@syntax-color-keyword:     @syntax-color-constant;
+@syntax-color-builtin:     @purple;
+@syntax-color-tag:         @syntax-color-operator;
+@syntax-color-tag-bracket: @syntax-text-color;
+@syntax-color-attribute:   @syntax-color-keyword;
+@syntax-color-import:      @purple;
+@syntax-color-snippet:     @green;

@@ -8,7 +8,7 @@
     "theme",
     "turquoise"
   ],
-  "repository": "https://github.com/atom/p1xelher0-syntax",
+  "repository": "https://github.com/p1xelHer0/p1xelher0-atom-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
